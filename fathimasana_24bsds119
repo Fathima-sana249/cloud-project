@@ -1,0 +1,113 @@
+PROJECT REPORT
+
+Fathima Sana.V
+24BSDS119
+
+#Server Management for Saas Application
+
+SaaS(Software as a service) it is a cloud based method of providing software to users.
+SaaS users subscribe to an application rather than purchasing it once and installing it.
+
+#COMMANDS
+
+1.Directory Creation & Organization:
+
+*) mkdir saas_application
+*)mkdir January Feburary March April May June July August September October November December
+*)cd January
+ touch module1_config.json
+ cd Feburary
+ touch module2_config.json
+
+2.Move and Rename Files:
+
+*) mv ./error_log.txt ./Febuary
+*) mv module1_config.json module1.v2_config.json
+
+3.Navigation and Listing Files:
+
+*)cd /path/to/saas_application
+*) ls -l
+*)ls -d */ | grep -E '^(January|February|March|April|May|June|July|August|September|October|November|December)/'
+
+4. File Permissions Management:
+
+
+*)touch saas_config.txt
+*)nano saas_config.txt
+*)chmod 700 saas_config.txt
+*)ls -l saas_config.txt
+
+5. Backup Files:
+
+*)mkdir backup
+*)cp module1_v2_config.json /Backup/
+*)ls -l backup
+
+6.Removing Files And Directories:
+
+*)rm error_log_old.txt
+*)rmdir March
+  ls -l March
+7.Creating a script for file generation:
+
+*)touch saas_log_1.txt_{2..100}
+
+8.Exploring File History:
+
+*)history 20
+*)history | grep -i Backup
+
+9.System Monitoring:
+
+*)uptime
+*)14:32:01 up 10 days,  3:45,  2 users,  load average: 0.00, 0.01, 0.05
+*)top
+
+10.Checking File Ownership and Permissions:
+
+*)ls -l 
+
+11.Ping test and Network Verification:
+
+*)ping google.com
+*)ping -c 5 8.8.8.8
+
+12.Search for specific files or content:
+
+*)find /path/to/saas_application -name "saas_log_1.txt"
+
+13.Create a Directory for each user:
+
+*)mkdir user_01
+  mkdir user_02
+*)chmod 700 user_01
+  chmod 700 user_02
+
+14.Creating a script for directory cleanup:
+
+*)nano cleanup_empty_dirs.sh
+
+15.File Sorting and Management:
+
+*)du
+*)echo "Largest Log Files:" > log_report.txt
+
+du -h *.log | sort -h | tail -n 5 >> log_report.txt
+
+echo -e "\nSmallest Log Files:" >> log_report.txt
+
+du -h *.log | sort -h | head -n 5 >> log_report.txt
+
+16.File type Identification:
+
+*)find . -type f -name "*.log"
+*)find . -type f \( -name "*.log" -o -name "*.json" \)
+*)find . -type f -name "*.log" > log_files.txt
+
+find . -type f -name "*.json" >> config_files.txt
+
+17.File Compression and Archive:
+
+*)tar -czvf saas_application.tar.gz saas_application
+*)tar -tzvf saas_application.tar.gz saas_application
